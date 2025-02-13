@@ -1,12 +1,14 @@
-fun main{
-    try {
-        // Crear un empleado fijo con datos válidos
-        val empleadoFijo = EmpleadoFijo("Carlos", "1234", 30000.0, 12)
+import kotlin.math.pow
 
-        println("${empleadoFijo.nombre} con ID-${empleadoFijo.id} tiene un salario de ${"%.2f".format(empleadoFijo.calculaSalario())} al mes.")
+
+fun main(){
+
+    try {
+
+      val empleadoFijo =  EmpleadoFijo("Gamerfriki", "00013", 28833.96 , 14)
+        println("El empleado ${empleadoFijo.nombre} con ID-${empleadoFijo.id} tiene un salario de ${"%.2f".format(empleadoFijo.calcularSalario())}")
     } catch (e: IllegalArgumentException) {
         println("Error: ${e.message}")
     }
-
 
 }
